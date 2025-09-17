@@ -1,0 +1,96 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven3.6.3'
+        jdk 'jdk22'
+    }
+    
+    environment {
+        SONAR_PROJECT_KEY='Register-Main-Java'
+        SONAR_PROJECT_NAME='Register-Main-Java'
+    }
+    
+    stages {
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        stage('SCM Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gunjankhanal/Petclinic-Java-App.git']])
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+        stage('Maven Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('Sonarqube Analysis') {
+            
+        steps {
+         withSonarQubeEnv('SonarQube-Server') {
+           sh '''
+          mvn clean verify sonar:sonar \
+          -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
+          -Dsonar.projectName=${SONAR_PROJECT_NAME} \
+
+          '''
+           }
+          }
+        }
+        
+        stage("Quality Gate") {
+            steps {
+                timeout(time: 10, unit: 'MINUTES') {
+                waitForQualityGate abortPipeline: true }
+            }
+        }
+        
+        stage('Trivy FS check') {
+            steps {
+                sh 'trivy fs . > trivyfs.txt'
+            }
+        }
+        stage('Docker Build tag and push') {
+            steps {
+                script {
+                withDockerRegistry(credentialsId: 'dockerhub', toolName: 'docker') {
+                 sh 'docker build -t java-register-app . '
+                 sh 'docker tag java-register-app gunjankhanal/register-app-pipeline:${BUILD_NUMBER} ' 
+                 sh 'docker push gunjankhanal/register-app-pipeline:${BUILD_NUMBER}'
+                }
+                }
+            }
+        }
+        stage('Trivy Image check') {
+            steps {
+                sh 'trivy image gunjankhanal/register-app-pipeline:${BUILD_NUMBER} > trivyimage.txt'
+            }
+        }
+        stage('Nexus Artifact Upload') {
+            steps {
+                nexusArtifactUploader artifacts: [[artifactId: 'maven-project', classifier: '', file: 'target/petclinic.war', type: 'war']], credentialsId: 'nexusnew-auth', groupId: 'com.example.maven-project', nexusUrl: '192.168.220.129:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'mymaven-register-repo', version: '1.0-SNAPSHOT'
+            }
+        }
+        
+        stage('Run Docker Image') {
+            steps {
+                sh '''
+                docker ps -a --filter "name=register-app-pipeline" --format "{{.ID}}" | xargs -r docker stop
+                docker ps -a --filter "name=register-app-pipeline" --format "{{.ID}}" | xargs -r docker rm
+                docker run -d -p 8899:8080 --name register-app-pipeline gunjankhanal/register-app-pipeline:${BUILD_NUMBER}
+                '''
+            }
+        }
+        
+    }
+}
+
+
+
