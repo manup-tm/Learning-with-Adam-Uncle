@@ -43,3 +43,6 @@ a:focus {
 a:visited {
     color: purple;
 }
+a:active {
+    color: green;
+}
