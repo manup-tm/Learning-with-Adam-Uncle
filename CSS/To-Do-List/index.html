@@ -10,31 +10,56 @@
     <div class="todo-container">
       <h1>My To-Do List</h1>
       <ul class="todo-list">
-        <li class="sub-item">
-          <a href="https://www.example.com/groceries" target="_blank">
-            <input type="checkbox" id="task1" />
-            <label for="task1" id="groceries">Buy groceries</label>
-          </a>
-        </li>
-        <li class="sub-item">
-          <a href="https://www.example.com/walk-dog" target="_blank">
-            <input type="checkbox" id="task2" />
-            <label for="task2" id="walkDog">Walk the dog</label>
-          </a>
-        </li>
-        <li class="sub-item">
-          <a href="https://www.example.com/read-book" target="_blank">
-            <input type="checkbox" id="task3" />
-            <label for="task3" id="readBook">Read a book</label>
-          </a>
-        </li>
-        <li class="sub-item">
-          <a href="https://www.example.com/coding-challenge" target="_blank">
-            <input type="checkbox" id="task4" />
-            <label for="task4" id="codingChallenge"
-              >Complete coding challenge</label
+        <li>
+          <input type="checkbox" id="task1" />
+          <label for="task1" id="groceries">Buy groceries</label>
+
+          <ul class="sub-item">
+            <a href="https://www.example.com/groceries" target="_blank"
+              ><li>Buy fruits</li></a
             >
-          </a>
+            <a href="https://www.example.com/groceries" target="_blank"
+              ><li>Buy vegetables</li></a
+            >
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="task2" />
+          <label for="task2" id="walkDog">Walk the dog</label>
+          <ul class="sub-item">
+            <a href="https://www.example.com/walk-dog" target="_blank"
+              ><li>Morning walk</li></a
+            >
+            <a href="https://www.example.com/evening-walk" target="_blank"
+              ><li>Evening walk</li></a
+            >
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="task3" />
+          <label for="task3" id="readBook">Read a book</label>
+          <ul class="sub-item">
+            <a href="https://www.example.com/read-book" target="_blank"
+              ><li>Chapter 1</li></a
+            >
+            <a href="https://www.example.com/read-book" target="_blank"
+              ><li>Chapter 2</li></a
+            >
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="task4" />
+          <label for="task4" id="codingChallenge"
+            >Complete coding challenge</label
+          >
+          <ul class="sub-item">
+            <a href="https://www.example.com/coding-challenge" target="_blank"
+              ><li>Solve problem 1</li></a
+            >
+            <a href="https://www.example.com/coding-challenge" target="_blank"
+              ><li>Solve problem 2</li></a
+            >
+          </ul>
         </li>
       </ul>
     </div>
