@@ -36,6 +36,7 @@ div{
     margin:auto;
     padding: 10px;
     display: inline-block;
+    border-radius: 5px;
 }
 .read-more:hover {
     background-color: #555;
