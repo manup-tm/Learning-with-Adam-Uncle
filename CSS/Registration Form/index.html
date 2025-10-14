@@ -21,10 +21,21 @@
         /></label>
         <label for="new-password"
           >Create a New Password:
-          <input id="new-password" type="password" pattern="[a-z0-5]{8,}" required
+          <input
+            id="new-password"
+            type="password"
+            pattern="[a-z0-5]{8,}"
+            required
         /></label>
       </fieldset>
-      <fieldset></fieldset>
+      <fieldset>
+        <label for="personal-account" >
+          <input type="radio" name="account-type" value="personal" id="personal-account" checked/>
+        </label>
+        <label for="business-account">
+          <input type="radio" name="account-type" value="business" id="business-account"/>
+        </label>
+      </fieldset>
       <fieldset></fieldset>
       <input type="submit" value="Submit" />
     </form>
