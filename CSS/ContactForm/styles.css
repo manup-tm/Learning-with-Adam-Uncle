@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #83a4d4, #b6fbff);
+  font-family: Arial, sans-serif;
+}
+div {
+  display: block;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+label {
+  color: #555;
+  margin: 10px 0 5px;
+}
+input,
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+button {
+  background-color: rgb(103, 174, 103);
+  font-size: 1em;
+}
+button:hover {
+  background-color: white;
+}
