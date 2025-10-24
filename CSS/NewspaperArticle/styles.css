@@ -17,3 +17,10 @@ html {
   font-size: 2em;
   font-weight: bold;
 }
+.sub-headline {
+  font-weight: 100;
+  font-size: 1.5em;
+}
+.author {
+  font-weight: bold;
+}
