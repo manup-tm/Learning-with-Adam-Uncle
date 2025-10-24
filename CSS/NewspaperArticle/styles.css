@@ -30,3 +30,7 @@ html {
   line-height: 2em;
   margin-bottom: 15px;
 }
+.text::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
