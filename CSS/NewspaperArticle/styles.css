@@ -6,9 +6,14 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 .name {
-  font-family: 'Times New Roman', serif;
+  font-family: "Times New Roman", serif;
   font-size: 2rem;
 }
-.name, .author {
+.name,
+.author {
   text-transform: uppercase;
+}
+.headline {
+  font-size: 2em;
+  font-weight: bold;
 }
