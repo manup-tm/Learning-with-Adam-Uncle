@@ -9,3 +9,6 @@ html {
   font-family: 'Times New Roman', serif;
   font-size: 2rem;
 }
+.name, .author {
+  text-transform: uppercase;
+}
