@@ -24,6 +24,15 @@ nav > ul {
   display: flex;
   justify-content: space-evenly;
 }
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+li a {
+  color: #dfdfe2;
+}
 h1,
 h2 {
   font-family: "Verdana", sans-serif;
@@ -32,7 +41,7 @@ h2 {
   border-bottom: 4px solid #dfdfe2;
 }
 h3::before {
-  content: "Question #"
+  content: "Question #";
 }
 .sr-only {
   position: absolute;
