@@ -57,7 +57,33 @@ h2 {
 h2 {
   border-bottom: 4px solid #dfdfe2;
   margin-top: 0;
-  padding-top: 60px
+  padding-top: 60px;
+}
+.info {
+  padding: 10px 0 0 5px;
+}
+.formrow {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+input {
+  font-size: 2em;
+}
+.info > label,
+.info > input {
+  display: inline-block;
+  text-align: right;
+}
+.info input {
+  width: 50%;
+  text-align: left;
+}
+.info label {
+  width: 10%;
+  min-width: 55px;
 }
 h3::before {
   content: "Question #";
