@@ -85,6 +85,18 @@ input {
   width: 10%;
   min-width: 55px;
 }
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+h3 {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 1.375rem;
+}
 h3::before {
   content: "Question #";
 }
