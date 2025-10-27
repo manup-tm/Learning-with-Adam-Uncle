@@ -30,7 +30,13 @@ nav > ul > li {
   padding: 0.2rem;
   display: block;
 }
+nav li:hover {
+  color: #1b1b32;
+  background-color: #dfdfe2;
+  cursor: pointer;
+}
 li a {
+  text-decoration: none;
   color: #dfdfe2;
 }
 h1,
