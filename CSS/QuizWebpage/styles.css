@@ -118,6 +118,18 @@ address a {
   background: #d0d0d5;
   border: 3px solid #3b3b4f;
 }
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 1.438rem;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+footer, footer a {
+  color: #dfdfe2
+}
 .sr-only {
   position: absolute;
   width: 1px;
