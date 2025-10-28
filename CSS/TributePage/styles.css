@@ -11,3 +11,26 @@ body {
 main {
   display: block;
 }
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.img-div {
+  background: white;
+  padding: 10px;
+  margin: 0;
+}
