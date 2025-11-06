@@ -56,9 +56,6 @@ section {
   width: 4.5rem;
   text-align: right;
 }
-span {
-  font-weight: normal;
-}
 table {
   border-collapse: collapse;
   border: 0;
@@ -112,4 +109,11 @@ tr.data th {
   text-align: left;
   padding-top: 0.3rem;
   padding-left: 0.5rem;
+}
+tr.data th .description {
+  font-style: italic;
+  font-weight: normal;
+  display: block;
+  padding: 1rem 0 0.75rem;
+  margin-right: -13.5rem;
 }
