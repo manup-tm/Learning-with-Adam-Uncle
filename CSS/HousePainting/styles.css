@@ -22,6 +22,32 @@ div {
   background-color: #ff9980;
   border: 6px solid #b35900;
 }
+#chimney {
+  position: absolute;
+  width: 90px;
+  height: 100px;
+  top: -100px;
+  left: 65%;
+  background: repeating-linear-gradient(
+    #e6e6e6,
+    #e6e6e6 10%,
+    black 10%,
+    black 12%
+  );
+  border: 2px solid black;
+  z-index: -1;
+}
+#smoke {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 -10px 10px 10px rgba(0, 0, 0, 0.3);
+  border: none;
+}
 #roof {
   border: 2px;
   width: 100%;
@@ -43,6 +69,12 @@ div {
       #ff9980 2%,
       #ff9980 5%
     );
+}
+#window-1 {
+  left: 7.5%;
+}
+#window-2 {
+  right: 7.5%;
 }
 #window-1,
 #window-2 {
