@@ -33,6 +33,10 @@ thead {
   vertical-align: middle;
   unicode-bidi: isolate;
   border-color: inherit;
+  background-image: linear-gradient(
+    hsl(197, 92%, 77%, 0.6),
+    hsl(197, 92%, 50%, 0.6)
+  );
 }
 th {
   padding: 0.4em;
@@ -70,4 +74,35 @@ tr[class="in-progress"] {
 td {
   text-align: center;
   padding: 0.3em;
+  vertical-align: inherit;
+}
+span {
+  display: inline-block;
+}
+span[class="status"] {
+  border-radius: 20% / 60%;
+}
+span[class="status"],
+span[class^="rate"] {
+  height: 1.85em;
+  width: 7em;
+  padding: 0.3em;
+}
+span[class^="rate"] > span {
+  border: 0.1em solid hsl(0, 0%, 50%);
+  border-radius: 50%;
+  background-color: hsl(0, 15%, 95%);
+  height: 100%;
+  width: 20%;
+  margin: 0.1em;
+}
+span[class~="one"] :first-child {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+span[class~="two"] :nth-child(1),
+span[class~="two"] :nth-child(2) {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+span[class~="three"] span {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
 }
