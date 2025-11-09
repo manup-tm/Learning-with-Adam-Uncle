@@ -96,6 +96,18 @@ span[class^="rate"] > span {
   width: 20%;
   margin: 0.1em;
 }
+tr[class="read"] span[class="status"] {
+  border: 0.1em solid hsl(120, 75%, 45%);
+  background-image: linear-gradient(hsl(120, 75%, 75%), hsl(120, 75%, 50%));
+}
+tr[class="in-progress"] span[class="status"] {
+  border: 0.1em solid hsl(40, 90%, 40%);
+  background-image: linear-gradient(hsl(40, 90%, 75%), hsl(40, 90%, 50%));
+}
+tr[class="to-read"] span[class="status"] {
+  border: 0.1em solid hsl(5, 100%, 45%);
+  background-image: linear-gradient(hsl(5, 100%, 75%), hsl(5, 100%, 50%));
+}
 span[class~="one"] :first-child {
   background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
 }
