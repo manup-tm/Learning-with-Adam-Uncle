@@ -61,6 +61,12 @@ tr[class="to-read"] {
     hsl(120, 20%, 75%, 0.6)
   );
 }
+tr[class="in-progress"] {
+  background-image: linear-gradient(
+    hsl(40, 100%, 85%, 0.6),
+    hsl(40, 100%, 65%, 0.6)
+  );
+}
 td {
   text-align: center;
   padding: 0.3em;
