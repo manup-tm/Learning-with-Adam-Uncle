@@ -68,3 +68,31 @@ li {
   position: relative;
   width: 100%;
 }
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
+article {
+  display: block;
+  unicode-bidi: isolate;
+}
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+section li {
+  margin: 15px 0px 0px 20px;
+}
