@@ -1,21 +1,9 @@
-html {
-  display: block;
-}
-html,
 body {
   min-width: 290px;
   color: #4d4e53;
   background-color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
-}
-body {
-  display: block;
-  margin: 8px;
-}
-nav {
-  display: block;
-  unicode-bidi: isolate;
 }
 #navbar {
   position: fixed;
@@ -28,38 +16,21 @@ nav {
   border-color: rgba(0, 22, 22, 0.4);
 }
 header {
-  display: block;
-  unicode-bidi: isolate;
   color: black;
   margin: 10px;
   text-align: center;
   font-size: 1.8em;
   font-weight: thin;
 }
-ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 40px;
-  unicode-bidi: isolate;
-}
-li {
-  display: list-item;
-  unicode-bidi: isolate;
+#main-doc header {
+  text-align: left;
+  margin: 0px;
 }
 #navbar ul {
   height: 88%;
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden;
-}
-#navbar a {
-  display: block;
-  padding: 10px 30px;
-  color: #4d4e53;
-  text-decoration: none;
-  cursor: pointer;
 }
 #navbar li {
   color: #4d4e53;
@@ -68,30 +39,23 @@ li {
   position: relative;
   width: 100%;
 }
-section {
+#navbar a {
   display: block;
-  unicode-bidi: isolate;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
 }
-article {
-  display: block;
-  unicode-bidi: isolate;
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
 }
 section article {
   color: #4d4e53;
   margin: 15px;
   font-size: 0.96em;
-}
-#main-doc header {
-  text-align: left;
-  margin: 0px;
-}
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  unicode-bidi: isolate;
 }
 section li {
   margin: 15px 0px 0px 20px;
