@@ -11,3 +11,23 @@ body {
   margin: auto;
   text-align: left;
 }
+h1 {
+  text-align: center;
+}
+label {
+  display: block;
+  margin: 8px auto;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #f1be32;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s;
+  vertical-align: middle;
+  margin: 15px;
+}
