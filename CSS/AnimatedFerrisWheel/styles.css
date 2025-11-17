@@ -7,6 +7,8 @@
   width: 55vw;
   max-width: 500px;
   max-height: 500px;
+  animation-name: wheel;
+  animation-duration: 10s;
 }
 .line {
   background-color: black;
@@ -63,4 +65,12 @@
 .cabin:nth-of-type(6) {
   right: 17%;
   top: 7%;
+}
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
