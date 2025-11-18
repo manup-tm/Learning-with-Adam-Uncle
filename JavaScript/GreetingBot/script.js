@@ -7,3 +7,5 @@ console.log("Allow me to introduce myself.");
 let botIntroduction;
 botIntroduction = "My name is " + bot + ".";
 console.log(botIntroduction);
+const botLocationSentence = "I live in " + botLocation + ".";
+console.log(botLocationSentence);
